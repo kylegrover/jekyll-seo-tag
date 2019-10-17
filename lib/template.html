@@ -105,8 +105,10 @@
   <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
 {% endif %}
 
+{% unless site.jekyll_seo_noschema %}
 <script type="application/ld+json">
   {{ seo_tag.json_ld | jsonify }}
 </script>
+{% endunless %}
 
 <!-- End Jekyll SEO tag -->
